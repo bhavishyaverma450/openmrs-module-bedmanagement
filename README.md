@@ -2,13 +2,31 @@
 
 ## Overview
 
-The Bed Management module brings in the data model, DAO entities, services and REST API layers for managing beds, admission locations and all other backend entities that relates to IPD Ward Management.
-This module was originally built and bundled within the [Bahmni distribution](https://github.com/Bahmni/openmrs-distro-bahmni) of OpenMRS, though is not limited to use by Bahmni.
+The Bed Management module provices backend services and REST APIs to manage hospital beds, wards, and patient bed assignments.
+It is commonly user in inpatient(IPD) workflows to track bed availability and patient occupancy.
 
-> Note that its _admin_ UI is shipped as an OWA, see [here](owa/README.md) for more details about it.
-> The module can be run without the OpenMRS owa module, which will provide access to API and web services.  The owa module is required as a companion module to run the bundled admin UI.
+## Prerequisites
+- Java 8 or Java 11
+- Maven 3.6+
+- OpenMRS Platform 2.x or later
+- MySQL (if running with OpenMRS SDK)
 
-## Contributing
+## Building the Module
+Clone the repository:
+```bash
+git clone https://github.com/openmrs/openmrs-module-bedmanagement.git
+cd openmrs-module-bedmanagement
+```
+```maven
+mvn clean install
+```
+---
 
-When sending a pull request to this repository, please ask someone working on the Bahmni product to help review and merge
-the pull request. You can do this by posting to https://talk.openmrs.org/c/software/bahmni
+### Running with OpenMRS SDK
+```md
+## Running with OpenMRS SDK
+```
+```bash
+mvn openmrs-sdk:setup
+mvn openmrs-sdk:run
+```
