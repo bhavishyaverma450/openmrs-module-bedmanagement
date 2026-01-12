@@ -2,8 +2,8 @@
 
 ## Overview
 
-The Bed Management module provices backend services and REST APIs to manage hospital beds, wards, and patient bed assignments.
-It is commonly user in inpatient(IPD) workflows to track bed availability and patient occupancy.
+The Bed Management module provides backend services and REST APIs to manage hospital beds, wards, and patient bed assignments.
+It is commonly used in inpatient (IPD) workflows to track bed availability and patient occupancy.
 
 ## Prerequisites
 - Java 8 or Java 11
@@ -17,16 +17,26 @@ Clone the repository:
 git clone https://github.com/openmrs/openmrs-module-bedmanagement.git
 cd openmrs-module-bedmanagement
 ```
-```maven
-mvn clean install
-```
+
 ---
 
-### Running with OpenMRS SDK
-```md
 ## Running with OpenMRS SDK
-```
-```bash
-mvn openmrs-sdk:setup
-mvn openmrs-sdk:run
-```
+
+1. Set up and start an OpenMRS SDK server:
+   ```bash
+   mvn openmrs-sdk:setup
+   mvn openmrs-sdk:run
+   ```
+  
+  ```md
+  
+  ```
+## Troubleshooting
+
+### Module does not appear after startup
+- Ensure the `.omod` file is placed in the correct OpenMRS modules directory.
+- Restart the OpenMRS server after copying the module.
+
+### Build fails due to Java version
+- Use Java 8 or Java 11.
+- Avoid Java 17 or later versions, as they may cause build issues.
